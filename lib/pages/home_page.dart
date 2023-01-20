@@ -57,9 +57,18 @@ class _HomePageState extends State<HomePage> {
           },
           selectedItemColor: Color.fromARGB(235, 16, 24, 95),
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Produtos"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart), label: "Carinho"),
+                icon: Icon(
+                  Icons.shopping_bag_outlined,
+                  size: 35,
+                ),
+                label: "Produtos"),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.shopping_cart_outlined,
+                  size: 35,
+                ),
+                label: "Carinho"),
           ]),
     );
   }
