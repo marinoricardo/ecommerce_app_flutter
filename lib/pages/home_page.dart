@@ -27,8 +27,9 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
           // currentIndex: 1,
+          backgroundColor: Color.fromARGB(235, 16, 24, 95),
           onTap: (value) {},
-          selectedItemColor: Color.fromARGB(235, 16, 24, 95),
+          selectedItemColor: Color.fromARGB(235, 255, 255, 255),
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Produtos"),
             BottomNavigationBarItem(
