@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -7,10 +7,10 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(235, 42, 10, 110),
+      backgroundColor: Color.fromARGB(235, 16, 24, 95),
       body: Container(
         child: Center(
-          child: CircularProgressIndicator(color: Colors.white),
+          child: Image.asset('images/logo.png'),
         ),
       ),
     );
