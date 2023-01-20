@@ -1,9 +1,19 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ecommerce_app_flutter/views/carinho.dart';
+import 'package:ecommerce_app_flutter/views/produtos.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  PageController _pageController = PageController();
+  int pageSelect = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +35,22 @@ class HomePage extends StatelessWidget {
               ))
         ],
       ),
+      body: PageView(
+        controller: _pageController,
+        children: [Produtos(), Carinho()],
+      ),
       bottomNavigationBar: BottomNavigationBar(
-          // currentIndex: 1,
-          backgroundColor: Color.fromARGB(235, 16, 24, 95),
-          onTap: (value) {},
-          selectedItemColor: Color.fromARGB(235, 255, 255, 255),
+          currentIndex: pageSelect,
+          // fixedColor: Color.fromARGB(235, 124, 124, 124),
+          // backgroundColor: Color.fromARGB(235, 32, 49, 205),
+          onTap: (int page) {
+            setState(() {
+              pageSelect = page;
+            });
+            _pageController.animateToPage(page,
+                duration: Duration(milliseconds: 300), curve: Curves.ease);
+          },
+          selectedItemColor: Color.fromARGB(235, 16, 24, 95),
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Produtos"),
             BottomNavigationBarItem(

@@ -61,6 +61,13 @@ flutter:
   assets:
     - images/logo.png
     - images/logo2.png
+    - images/produto.png
+    - images/produto1.png
+    - images/produto2.png
+    - images/produto3.png
+    - images/produto4.png
+    - images/produto5.png
+    - images/produto6.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
