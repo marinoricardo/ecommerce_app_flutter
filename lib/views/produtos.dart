@@ -24,7 +24,8 @@ class Produtos extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              print('clicou um produto..');
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto');
             },
             child: Image.asset(
               'images/produto.png',

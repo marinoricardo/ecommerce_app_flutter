@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce_app_flutter/pages/detalhes_produto.dart';
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:ecommerce_app_flutter/pages/splash_page.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': ((context) => const SplashPage()),
         '/home': ((context) => const HomePage()),
+        '/detalhesproduto': ((context) => const DetalhesProduto()),
       },
     );
   }
