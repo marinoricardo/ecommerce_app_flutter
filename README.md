@@ -6,7 +6,7 @@
 
 ## 🚀 Tech
 
-- ⚛️ Flutter
+- Flutter
 
 ## ✋🏻 Prerequisites
 
