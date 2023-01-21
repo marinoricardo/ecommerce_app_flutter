@@ -14,7 +14,6 @@ class Produtos extends StatelessWidget {
       mainAxisSpacing: 10,
       crossAxisCount: 2,
       children: <Widget>[
-        // Text('data'),
         Container(
           // height: 100,
           // width: 200,
@@ -23,30 +22,16 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          // decoration: Decoration(),
-          // color: Color.fromARGB(255, 223, 228, 228),
-          child: Image.asset(
-            'images/produto.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              print('clicou um produto..');
+            },
+            child: Image.asset(
+              'images/produto.png',
+              height: 300,
+              width: 300,
+            ),
           ),
-          // Column(
-          //   // mainAxisAlignment: MainAxisAlignment.start,
-          //   children: [
-          //     Expanded(
-          //       child: Image.asset(
-          //         'images/produto.png',
-          //         height: 300,
-          //         width: 300,
-          //       ),
-          //     ),
-          //     Text(
-          //       'Nome do Produto',
-          //       style: TextStyle(fontSize: 18, fontFamily: 'Arial'),
-          //     ),
-          //     Text(' 530 Mts')
-          //   ],
-          // ),
         ),
         Container(
           padding: const EdgeInsets.all(8),
