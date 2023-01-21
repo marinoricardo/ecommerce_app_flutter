@@ -25,7 +25,8 @@ class Produtos extends StatelessWidget {
           child: InkWell(
             onTap: () {
               // print('clicou um produto..');
-              Navigator.of(context).pushNamed('/detalhesproduto');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto.png');
             },
             child: Image.asset(
               'images/produto.png',
@@ -40,10 +41,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto1.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto1.png');
+            },
+            child: Image.asset(
+              'images/produto1.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -52,10 +60,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto6.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto6.png');
+            },
+            child: Image.asset(
+              'images/produto6.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -64,10 +79,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto3.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto3.png');
+            },
+            child: Image.asset(
+              'images/produto3.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -76,10 +98,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto.png');
+            },
+            child: Image.asset(
+              'images/produto.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -88,10 +117,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto1.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto1.png');
+            },
+            child: Image.asset(
+              'images/produto1.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -100,10 +136,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto4.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto4.png');
+            },
+            child: Image.asset(
+              'images/produto4.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -112,10 +155,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto5.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto5.png');
+            },
+            child: Image.asset(
+              'images/produto5.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -124,10 +174,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto6.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto6.png');
+            },
+            child: Image.asset(
+              'images/produto6.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
         Container(
@@ -136,10 +193,17 @@ class Produtos extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(25)),
             color: Color.fromARGB(255, 223, 228, 228),
           ),
-          child: Image.asset(
-            'images/produto1.png',
-            height: 300,
-            width: 300,
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto1.png');
+            },
+            child: Image.asset(
+              'images/produto1.png',
+              height: 300,
+              width: 300,
+            ),
           ),
         ),
       ],

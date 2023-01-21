@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable, unnecessary_brace_in_string_interps
 
 import 'package:flutter/material.dart';
 
@@ -12,6 +12,8 @@ class DetalhesProduto extends StatefulWidget {
 class _DetalhesProdutoState extends State<DetalhesProduto> {
   @override
   Widget build(BuildContext context) {
+    var args = ModalRoute.of(context)!.settings.arguments;
+    // print(args);
     return Scaffold(
       appBar: AppBar(
         title: Text('Detalhes do Produto'),
@@ -24,7 +26,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
             height: 300,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
-              'images/produto6.png',
+              '${args}',
               height: 300,
               width: 300,
             ),
