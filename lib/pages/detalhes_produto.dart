@@ -22,8 +22,11 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
       body: Column(
         children: [
           Container(
-            color: Colors.amber,
-            height: 300,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+              color: Color.fromARGB(255, 223, 228, 228),
+            ),
+            height: 320,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
               '${args}',
@@ -46,7 +49,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                     height: 10,
                   ),
                   Text(
-                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.',
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
                     style: TextStyle(fontSize: 16),
                   ),
                 ],
