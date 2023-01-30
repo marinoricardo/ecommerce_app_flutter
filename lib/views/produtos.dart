@@ -27,6 +27,7 @@ class Produtos extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(25)),
                 color: Color.fromARGB(255, 223, 228, 228),
+                // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
               ),
               child: Image.asset(
                 produto.image!,

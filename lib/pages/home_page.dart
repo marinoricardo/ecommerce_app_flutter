@@ -90,6 +90,7 @@ class Produto {
   final String? name;
   final String? price;
   final String? image;
+  final Color? color;
 
-  Produto({required this.name, this.price, this.image});
+  Produto({required this.name, this.price, this.image, this.color});
 }
