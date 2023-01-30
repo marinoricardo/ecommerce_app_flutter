@@ -68,11 +68,11 @@ class _HomePageState extends State<HomePage> {
           Carinho()
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Color.fromARGB(235, 16, 24, 95),
-        child: Icon(Icons.search),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   backgroundColor: Color.fromARGB(235, 16, 24, 95),
+      //   child: Icon(Icons.search),
+      // ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: pageSelect,
           // fixedColor: Color.fromARGB(235, 124, 124, 124),
