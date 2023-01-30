@@ -33,16 +33,20 @@ class _HomePageState extends State<HomePage> {
         toolbarHeight: 90,
         title: Image.asset(
           'images/logo.png',
-          height: 200,
+          height: 300,
           width: 400,
         ),
         backgroundColor: Color.fromRGBO(55, 55, 188, 1),
         // backgroundColor: Color.fromARGB(235, 16, 24, 95),
         // actions: [
         //   IconButton(
-        //       onPressed: () {},
+        //       onPressed: () {
+        //         AlertDialog(
+        //           title: Text('aaa'),
+        //         );
+        //       },
         //       icon: Icon(
-        //         Icons.shopping_cart_outlined,
+        //         Icons.more_vert,
         //         size: 25,
         //       ))
         // ],
