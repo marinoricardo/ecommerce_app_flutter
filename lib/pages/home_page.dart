@@ -29,21 +29,21 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        toolbarHeight: 80,
+        toolbarHeight: 90,
         title: Image.asset(
           'images/logo.png',
           height: 200,
           width: 400,
         ),
         backgroundColor: Color.fromARGB(235, 16, 24, 95),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.shopping_cart_outlined,
-                size: 25,
-              ))
-        ],
+        // actions: [
+        //   IconButton(
+        //       onPressed: () {},
+        //       icon: Icon(
+        //         Icons.shopping_cart_outlined,
+        //         size: 25,
+        //       ))
+        // ],
       ),
       body: PageView(
         controller: _pageController,
