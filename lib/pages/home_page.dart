@@ -16,14 +16,12 @@ class _HomePageState extends State<HomePage> {
   int pageSelect = 0;
 
   final List<Produto> produtos = [
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
-    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
   ];
 
   @override
@@ -57,12 +55,14 @@ class _HomePageState extends State<HomePage> {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.75,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
+                // mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
               ),
               itemCount: produtos.length,
-              itemBuilder: (context, index) =>
-                  Produtos(produto: produtos[index]),
+              itemBuilder: (context, index) => Produtos(
+                produto: produtos[index],
+                press: () {},
+              ),
             ),
           )),
           Carinho()
@@ -106,6 +106,7 @@ class _HomePageState extends State<HomePage> {
 class Produto {
   final String? name;
   final String? price;
+  final String? image;
 
-  Produto({required this.name, this.price});
+  Produto({required this.name, this.price, this.image});
 }
