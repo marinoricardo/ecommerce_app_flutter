@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
 import 'package:ecommerce_app_flutter/views/carinho.dart';
 import 'package:ecommerce_app_flutter/views/produtos.dart';
 import 'package:flutter/material.dart';
@@ -47,26 +48,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: PageView(
         controller: _pageController,
-        children: [
-          Expanded(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.75,
-                // mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
-              ),
-              itemCount: produtos.length,
-              itemBuilder: (context, index) => Produtos(
-                produto: produtos[index],
-                press: () {},
-              ),
-            ),
-          )),
-          Carinho()
-        ],
+        children: [ProdutosPage(), Carinho()],
       ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {},

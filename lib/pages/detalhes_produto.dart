@@ -25,8 +25,11 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
-              color: Color.fromARGB(255, 223, 228, 228),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
+              ),
+              color: Color.fromARGB(255, 228, 228, 223),
             ),
             height: 320,
             width: MediaQuery.of(context).size.width,
