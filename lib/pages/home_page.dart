@@ -15,12 +15,23 @@ class _HomePageState extends State<HomePage> {
   PageController _pageController = PageController();
   int pageSelect = 0;
 
+  final List<Produto> produtos = [
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+    Produto(name: "Poduto 1", price: "1244"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        toolbarHeight: 60,
+        toolbarHeight: 80,
         title: Image.asset(
           'images/logo.png',
           height: 200,
@@ -38,7 +49,24 @@ class _HomePageState extends State<HomePage> {
       ),
       body: PageView(
         controller: _pageController,
-        children: [Produtos(), Carinho()],
+        children: [
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 0.75,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              itemCount: produtos.length,
+              itemBuilder: (context, index) =>
+                  Produtos(produto: produtos[index]),
+            ),
+          )),
+          Carinho()
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -61,16 +89,23 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.shopping_bag_outlined,
-                  size: 35,
+                  size: 25,
                 ),
                 label: "Produtos"),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.shopping_cart_outlined,
-                  size: 35,
+                  size: 25,
                 ),
                 label: "Carinho"),
           ]),
     );
   }
+}
+
+class Produto {
+  final String? name;
+  final String? price;
+
+  Produto({required this.name, this.price});
 }
