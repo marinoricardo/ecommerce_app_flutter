@@ -13,10 +13,11 @@ class Produtos extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: GestureDetector(
-        onTap: (() {
-          print("clicou");
-          print(produto.image);
-        }),
+        onTap: () {
+          // press
+          Navigator.of(context)
+              .pushNamed('/detalhesproduto', arguments: produto);
+        },
         child: Column(
           children: [
             Container(

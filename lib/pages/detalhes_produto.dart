@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable, unnecessary_brace_in_string_interps
 
+import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class DetalhesProduto extends StatefulWidget {
@@ -12,11 +13,12 @@ class DetalhesProduto extends StatefulWidget {
 class _DetalhesProdutoState extends State<DetalhesProduto> {
   @override
   Widget build(BuildContext context) {
-    var args = ModalRoute.of(context)!.settings.arguments;
+    Produto args = ModalRoute.of(context)!.settings.arguments as Produto;
+    // var args = ModalRoute.of(context)!.settings.arguments;
     // print(args);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalhes do Produto'),
+        title: Text('${args.name}'),
         backgroundColor: Color.fromARGB(235, 16, 24, 95),
       ),
       body: Column(
@@ -29,7 +31,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
             height: 320,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
-              '${args}',
+              '${args.image}',
               height: 300,
               width: 300,
             ),
@@ -42,7 +44,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
               child: Column(
                 children: [
                   Text(
-                    'Nome do Produto - 530 Meticais',
+                    '${args.name} - ${args.price} Meticais',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
