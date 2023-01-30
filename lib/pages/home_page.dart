@@ -36,7 +36,8 @@ class _HomePageState extends State<HomePage> {
           height: 200,
           width: 400,
         ),
-        backgroundColor: Color.fromARGB(235, 16, 24, 95),
+        backgroundColor: Color.fromRGBO(55, 55, 188, 1),
+        // backgroundColor: Color.fromARGB(235, 16, 24, 95),
         // actions: [
         //   IconButton(
         //       onPressed: () {},
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
             _pageController.animateToPage(page,
                 duration: Duration(milliseconds: 300), curve: Curves.ease);
           },
-          selectedItemColor: Color.fromARGB(235, 16, 24, 95),
+          selectedItemColor: Color.fromRGBO(55, 55, 188, 1),
           items: [
             BottomNavigationBarItem(
                 icon: Icon(

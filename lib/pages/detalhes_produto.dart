@@ -19,7 +19,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
     return Scaffold(
       appBar: AppBar(
         title: Text('${args.name}'),
-        backgroundColor: Color.fromARGB(235, 16, 24, 95),
+        backgroundColor: Color.fromRGBO(55, 55, 188, 1),
       ),
       body: Column(
         children: [
@@ -67,9 +67,10 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
               margin: EdgeInsets.all(24),
               child: ElevatedButton(
                 style: ButtonStyle(
-                    minimumSize: MaterialStateProperty.all(Size.fromHeight(40)),
-                    backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(235, 16, 24, 95))),
+                  minimumSize: MaterialStateProperty.all(Size.fromHeight(40)),
+                  backgroundColor:
+                      MaterialStateProperty.all(Color.fromRGBO(55, 55, 188, 1)),
+                ),
                 onPressed: () {},
                 child: Text('Adicionar ao Carrinho'),
               ),

@@ -14,29 +14,95 @@ class ProdutosPage extends StatelessWidget {
     Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
     Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
     Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Todos os Produtos',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(235, 16, 24, 95),
-                  ),
-                ),
-                // Icon(Icons.search)
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(20.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Text(
+          //         'Todos os Produtos',
+          //         style: TextStyle(
+          //           fontSize: 20,
+          //           fontWeight: FontWeight.bold,
+          //           color: Color.fromARGB(235, 16, 24, 95),
+          //         ),
+          //       ),
+          //       // Icon(Icons.search)
+          //     ],
+          //   ),
+          // ),
           // Padding(
           //   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           //   child: TextField(
@@ -47,22 +113,35 @@ class ProdutosPage extends StatelessWidget {
           //   ),
           // ),
           Expanded(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.75,
-                // mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
-              ),
-              itemCount: produtos.length,
-              itemBuilder: (context, index) => Produtos(
-                produto: produtos[index],
-                press: () {},
-              ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child: produtos.isEmpty
+                  ? Center(
+                      child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularProgressIndicator(),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Text('Processando.. Por favor aguarde!')
+                      ],
+                    ))
+                  : GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.75,
+                        // mainAxisSpacing: 20,
+                        crossAxisSpacing: 20,
+                      ),
+                      itemCount: produtos.length,
+                      itemBuilder: (context, index) => Produtos(
+                        produto: produtos[index],
+                        press: () {},
+                      ),
+                    ),
             ),
-          )),
+          ),
         ],
       ),
     );
