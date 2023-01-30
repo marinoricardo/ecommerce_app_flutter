@@ -36,6 +36,27 @@ class Produtos extends StatelessWidget {
           ),
         ),
         Container(
+          // height: 100,
+          // width: 200,
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+            color: Color.fromARGB(255, 223, 228, 228),
+          ),
+          child: InkWell(
+            onTap: () {
+              // print('clicou um produto..');
+              Navigator.of(context).pushNamed('/detalhesproduto',
+                  arguments: 'images/produto.png');
+            },
+            child: Image.asset(
+              'images/produto.png',
+              height: 300,
+              width: 300,
+            ),
+          ),
+        ),
+        Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(25)),
