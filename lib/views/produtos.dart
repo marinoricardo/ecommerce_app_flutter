@@ -11,14 +11,43 @@ class Produtos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(25)),
-        color: Color.fromARGB(255, 223, 228, 228),
-        // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
-      ),
-      child: Column(
-        children: [],
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).pushNamed('/detalhesproduto', arguments: produto);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          color: Color.fromARGB(255, 223, 228, 228),
+          // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                produto.image!,
+                width: 180,
+                height: 180,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+              child: Text(
+                produto.name!,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(235, 16, 24, 95),
+                ),
+              ),
+            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   children: [Icon(Icons.shopping_cart)],
+            // )
+          ],
+        ),
       ),
     );
     // return SingleChildScrollView(
