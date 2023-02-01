@@ -11,48 +11,58 @@ class Produtos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: GestureDetector(
-        onTap: () {
-          // press
-          Navigator.of(context)
-              .pushNamed('/detalhesproduto', arguments: produto);
-        },
-        child: Column(
-          children: [
-            Container(
-              height: 180,
-              // width: 160,
-              // padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(25)),
-                color: Color.fromARGB(255, 223, 228, 228),
-                // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
-              ),
-              child: Image.asset(
-                produto.image!,
-                height: 300,
-                width: 300,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              child: Text(
-                produto.name!,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(235, 16, 24, 95),
-                ),
-              ),
-            ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   children: [Icon(Icons.shopping_cart)],
-            // )
-          ],
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(25)),
+        color: Color.fromARGB(255, 223, 228, 228),
+        // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
+      ),
+      child: Column(
+        children: [],
       ),
     );
+    // return SingleChildScrollView(
+    //   child: GestureDetector(
+    //     onTap: () {
+    //       // press
+    //       Navigator.of(context)
+    //           .pushNamed('/detalhesproduto', arguments: produto);
+    //     },
+    //     child: Column(
+    //       children: [
+    //         Container(
+    //           height: 180,
+    //           // width: 160,
+    //           // padding: const EdgeInsets.all(8),
+    //           decoration: BoxDecoration(
+    //             borderRadius: BorderRadius.all(Radius.circular(25)),
+    //             color: Color.fromARGB(255, 223, 228, 228),
+    //             // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
+    //           ),
+    //           child: Image.asset(
+    //             produto.image!,
+    //             height: 300,
+    //             width: 300,
+    //           ),
+    //         ),
+    //         Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+    //           child: Text(
+    //             produto.name!,
+    //             style: TextStyle(
+    //               fontSize: 18,
+    //               fontWeight: FontWeight.bold,
+    //               color: Color.fromARGB(235, 16, 24, 95),
+    //             ),
+    //           ),
+    //         ),
+    //         // Row(
+    //         //   mainAxisAlignment: MainAxisAlignment.end,
+    //         //   children: [Icon(Icons.shopping_cart)],
+    //         // )
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 }
