@@ -36,9 +36,9 @@ class Produtos extends StatelessWidget {
               child: Text(
                 produto.name!,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(235, 16, 24, 95),
+                  color: Colors.black,
                 ),
               ),
             ),

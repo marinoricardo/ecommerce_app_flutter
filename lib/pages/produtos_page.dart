@@ -11,7 +11,7 @@ class ProdutosPage extends StatelessWidget {
     Produto(
       name: "Oleo",
       price: "144",
-      image: 'images/produto1.png',
+      image: 'images/produto4.png',
       color: Colors.amber,
     ),
     Produto(
@@ -27,11 +27,13 @@ class ProdutosPage extends StatelessWidget {
       color: Colors.red,
     ),
     Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/invite1.png'),
     Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
     Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
     Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
     Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
     Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
     Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
     Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
     Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
@@ -87,8 +89,8 @@ class ProdutosPage extends StatelessWidget {
                         crossAxisCount: 2,
                         childAspectRatio: 0.75,
                         // mainAxisSpacing: 20,
-                        mainAxisSpacing: 10.0,
-                        crossAxisSpacing: 10.0,
+                        mainAxisSpacing: 20.0,
+                        crossAxisSpacing: 20.0,
                       ),
                       itemCount: produtos.length,
                       itemBuilder: (context, index) => Produtos(

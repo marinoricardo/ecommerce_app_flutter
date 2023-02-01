@@ -69,6 +69,8 @@ flutter:
     - images/produto4.png
     - images/produto5.png
     - images/produto6.png
+    - images/invite1.png
+    - images/pircom.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
