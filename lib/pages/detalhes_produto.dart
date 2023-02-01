@@ -31,12 +31,12 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
               ),
               color: Color.fromARGB(255, 228, 228, 223),
             ),
-            height: 320,
+            height: 300,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(
               '${args.image}',
-              height: 300,
-              width: 300,
+              // height: 300,
+              width: double.infinity,
             ),
           ),
           Padding(
@@ -51,12 +51,73 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  Text(
-                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-                    style: TextStyle(fontSize: 16),
+                  Table(
+                    border: TableBorder.all(color: Colors.black, width: 1.5),
+                    children: const [
+                      TableRow(children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "Quantidade",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "Mohit",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                        ),
+                      ]),
+                      TableRow(children: [
+                        Text(
+                          "Ankit",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Text(
+                          "27",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                      ]),
+                      TableRow(children: [
+                        Text(
+                          "Rakhi",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Text(
+                          "26",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                      ]),
+                      TableRow(children: [
+                        Text(
+                          "Yash",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Text(
+                          "29",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                      ]),
+                      TableRow(children: [
+                        Text(
+                          "Pragati",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Text(
+                          "28",
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                      ]),
+                    ],
                   ),
+                  // Text(
+                  //   'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+                  //   style: TextStyle(fontSize: 16),
+                  // ),
                 ],
               ),
             ),
