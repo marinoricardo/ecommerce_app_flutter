@@ -25,14 +25,14 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
         children: [
           Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
-              ),
+              // borderRadius: BorderRadius.only(
+              //   bottomLeft: Radius.circular(50),
+              //   bottomRight: Radius.circular(50),
+              // ),
               color: Color.fromARGB(255, 228, 228, 223),
             ),
             height: 300,
-            width: MediaQuery.of(context).size.width,
+            width: double.infinity,
             child: Image.asset(
               '${args.image}',
               // height: 300,
@@ -53,71 +53,10 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                   SizedBox(
                     height: 20,
                   ),
-                  Table(
-                    border: TableBorder.all(color: Colors.black, width: 1.5),
-                    children: const [
-                      TableRow(children: [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            "Quantidade",
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            "Mohit",
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                        ),
-                      ]),
-                      TableRow(children: [
-                        Text(
-                          "Ankit",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        Text(
-                          "27",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                      ]),
-                      TableRow(children: [
-                        Text(
-                          "Rakhi",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        Text(
-                          "26",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                      ]),
-                      TableRow(children: [
-                        Text(
-                          "Yash",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        Text(
-                          "29",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                      ]),
-                      TableRow(children: [
-                        Text(
-                          "Pragati",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        Text(
-                          "28",
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                      ]),
-                    ],
+                  Text(
+                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+                    style: TextStyle(fontSize: 16),
                   ),
-                  // Text(
-                  //   'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-                  //   style: TextStyle(fontSize: 16),
-                  // ),
                 ],
               ),
             ),
