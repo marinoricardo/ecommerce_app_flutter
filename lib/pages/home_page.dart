@@ -18,6 +18,12 @@ class _HomePageState extends State<HomePage> {
   int pageSelect = 0;
 
   final List<Produto> produtos = [
+    Produto(name: "Oleo4", price: "144", image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    Produto(name: "Produto 14", price: "1244", image: 'images/produto3.png'),
+    Produto(name: "Produto 512", price: "1204", image: 'images/produto4.png'),
+    Produto(name: "Produto 155", price: "1244", image: 'images/produto5.png'),
+    Produto(name: "Produto 1120", price: "9244", image: 'images/produto6.png'),
     Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
     Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
     Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),

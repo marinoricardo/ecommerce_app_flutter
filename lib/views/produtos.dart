@@ -15,14 +15,19 @@ class Produtos extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            print(produto.name);
+            Navigator.of(context)
+                .pushNamed('/detalhesproduto', arguments: produto);
           },
-          child: Card(
-            elevation: 0,
-            shadowColor: Colors.grey.shade300,
-            shape: RoundedRectangleBorder(
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),
             ),
+            // elevation: 0,
+            // shadowColor: Colors.grey.shade300,
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(20),
+            // ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -39,18 +44,26 @@ class Produtos extends StatelessWidget {
                   Text(
                     produto.name!,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                  )
+                  ),
+                  Text(
+                    '${produto.price!} Meticais',
+                    style: TextStyle(
+                      fontSize: 16,
+                      // fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(55, 55, 188, 1),
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
         ),
         Positioned(
-          top: 4,
-          right: 4,
+          top: 0,
+          right: 0,
           child: GestureDetector(
             onTap: () {},
             child: Container(
