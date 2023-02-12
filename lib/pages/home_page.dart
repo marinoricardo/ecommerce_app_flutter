@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:badges/badges.dart';
 import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
 import 'package:ecommerce_app_flutter/views/carinho.dart';
 import 'package:ecommerce_app_flutter/views/produtos.dart';
@@ -72,18 +73,22 @@ class _HomePageState extends State<HomePage> {
             _pageController.animateToPage(page,
                 duration: Duration(milliseconds: 300), curve: Curves.ease);
           },
-          selectedItemColor: Color.fromRGBO(55, 55, 188, 1),
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white.withAlpha(100),
+          backgroundColor: Color.fromRGBO(55, 55, 188, 1),
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.shopping_bag_outlined,
-                  size: 25,
                 ),
                 label: "Produtos"),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  size: 25,
+                icon: Badge(
+                  badgeContent: Text('7'),
+                  badgeColor: Colors.white,
+                  child: Icon(
+                    Icons.shopping_cart_outlined,
+                  ),
                 ),
                 label: "Carinho"),
           ]),
