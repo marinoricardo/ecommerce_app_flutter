@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable, unnecessary_brace_in_string_interps
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable, unnecessary_brace_in_string_interps, sort_child_properties_last
 
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -17,62 +17,187 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
     // var args = ModalRoute.of(context)!.settings.arguments;
     // print(args);
     return Scaffold(
-      appBar: AppBar(
-        title: Text('${args.name}'),
-        backgroundColor: Color.fromRGBO(55, 55, 188, 1),
-      ),
-      body: Column(
+      backgroundColor: Colors.white.withAlpha(230),
+      body: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              // borderRadius: BorderRadius.only(
-              //   bottomLeft: Radius.circular(50),
-              //   bottomRight: Radius.circular(50),
-              // ),
-              color: Color.fromARGB(255, 228, 228, 223),
-            ),
-            height: 300,
-            width: double.infinity,
-            child: Image.asset(
-              '${args.image}',
-              // height: 300,
-              width: double.infinity,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(24),
-            child: Container(
-              alignment: Alignment.bottomLeft,
-              // margin: EdgeInsets.all(24),
-              child: Column(
-                children: [
-                  Text(
-                    '${args.name} - ${args.price} Meticais',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          Column(
+            children: [
+              Expanded(
+                child: Hero(
+                  child: Image.asset(
+                    args.image!,
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              alignment: Alignment.bottomCenter,
-              margin: EdgeInsets.all(24),
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  minimumSize: MaterialStateProperty.all(Size.fromHeight(40)),
-                  backgroundColor:
-                      MaterialStateProperty.all(Color.fromRGBO(55, 55, 188, 1)),
+                  tag: args.name!,
                 ),
-                onPressed: () {},
-                child: Text('Adicionar ao Carrinho'),
+              ),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 40),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(50),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        args.name!,
+                        style: TextStyle(
+                          fontSize: 27,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        '${args.price!} Meticais',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 10,
+                            ),
+                            child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Text(
+                                    'Descricao do Produto',
+                                    style: TextStyle(
+                                      height: 1.5,
+                                    ),
+                                  ),
+                                ),
+                                Table(
+                                  border: TableBorder.all(
+                                      color: Colors.black, width: 1.5),
+                                  children: const [
+                                    TableRow(children: [
+                                      Center(
+                                        child: Text(
+                                          "Material",
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Mohit",
+                                          style: TextStyle(fontSize: 15.0),
+                                        ),
+                                      ),
+                                    ]),
+                                    TableRow(children: [
+                                      Center(
+                                        child: Text(
+                                          "Color",
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Mohit",
+                                          style: TextStyle(fontSize: 15.0),
+                                        ),
+                                      ),
+                                    ]),
+                                    TableRow(children: [
+                                      Center(
+                                        child: Text(
+                                          "Intesidade",
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Mohit",
+                                          style: TextStyle(fontSize: 15.0),
+                                        ),
+                                      ),
+                                    ]),
+                                    TableRow(children: [
+                                      Center(
+                                        child: Text(
+                                          "Material",
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Mohit",
+                                          style: TextStyle(fontSize: 15.0),
+                                        ),
+                                      ),
+                                    ]),
+                                    TableRow(children: [
+                                      Center(
+                                        child: Text(
+                                          "Material",
+                                          style: TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Mohit",
+                                          style: TextStyle(fontSize: 15.0),
+                                        ),
+                                      ),
+                                    ]),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          minimumSize:
+                              MaterialStateProperty.all(Size.fromHeight(40)),
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromRGBO(55, 55, 188, 1)),
+                        ),
+                        icon: Icon(Icons.shopping_cart),
+                        label: Text(
+                          'Adicionar ao Carinho',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+          Positioned(
+            top: 10,
+            left: 10,
+            child: SafeArea(
+              child: IconButton(
+                onPressed: () => Navigator.of(context).pop(),
+                icon: Icon(Icons.arrow_back_ios),
               ),
             ),
           ),

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print, sort_child_properties_last
 
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -11,44 +11,34 @@ class Produtos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushNamed('/detalhesproduto', arguments: produto);
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
-          color: Color.fromARGB(255, 223, 228, 228),
-          // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
-        ),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                produto.image!,
-                width: 180,
-                height: 180,
-              ),
+    return Stack(
+      children: [
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context)
+                .pushNamed('/detalhesproduto', arguments: produto);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(25)),
+              color: Color.fromARGB(255, 223, 228, 228),
+              // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              child: Text(
-                produto.name!,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: Hero(
+                    child: Image.asset(produto.image!),
+                    tag: produto.name!,
+                  ),
                 ),
-              ),
+                Text(produto.name!)
+              ],
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   children: [Icon(Icons.shopping_cart)],
-            // )
-          ],
+          ),
         ),
-      ),
+      ],
     );
     // return SingleChildScrollView(
     //   child: GestureDetector(

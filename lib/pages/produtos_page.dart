@@ -93,10 +93,16 @@ class ProdutosPage extends StatelessWidget {
                         crossAxisSpacing: 20.0,
                       ),
                       itemCount: produtos.length,
-                      itemBuilder: (context, index) => Produtos(
-                        produto: produtos[index],
-                        press: () {},
-                      ),
+                      itemBuilder: (context, index) {
+                        return Produtos(
+                          press: () {},
+                          produto: produtos[index],
+                        );
+                      },
+                      // itemBuilder: (context, index) => Produtos(
+                      //   produto: produtos[index],
+                      //   press: () {},
+                      // ),
                     ),
             ),
           ),
