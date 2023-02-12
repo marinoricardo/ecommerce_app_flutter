@@ -15,73 +15,61 @@ class Produtos extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.of(context)
-                .pushNamed('/detalhesproduto', arguments: produto);
+            print(produto.name);
           },
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(25)),
-              color: Color.fromARGB(255, 223, 228, 228),
-              // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
+          child: Card(
+            elevation: 0,
+            shadowColor: Colors.grey.shade300,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Expanded(
-                  child: Hero(
-                    child: Image.asset(produto.image!),
-                    tag: produto.name!,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    child: Hero(
+                      child: Image.asset(
+                        produto.image!,
+                      ),
+                      tag: produto.name!,
+                    ),
                   ),
-                ),
-                Text(produto.name!)
-              ],
+                  Text(
+                    produto.name!,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
+        Positioned(
+          top: 4,
+          right: 4,
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              height: 40,
+              width: 35,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(55, 55, 188, 1),
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(10)),
+              ),
+              child: Icon(
+                Icons.add_shopping_cart_outlined,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        )
       ],
     );
-    // return SingleChildScrollView(
-    //   child: GestureDetector(
-    //     onTap: () {
-    //       // press
-    //       Navigator.of(context)
-    //           .pushNamed('/detalhesproduto', arguments: produto);
-    //     },
-    //     child: Column(
-    //       children: [
-    //         Container(
-    //           height: 180,
-    //           // width: 160,
-    //           // padding: const EdgeInsets.all(8),
-    //           decoration: BoxDecoration(
-    //             borderRadius: BorderRadius.all(Radius.circular(25)),
-    //             color: Color.fromARGB(255, 223, 228, 228),
-    //             // color: produto.color ?? Color.fromARGB(255, 223, 228, 228),
-    //           ),
-    //           child: Image.asset(
-    //             produto.image!,
-    //             height: 300,
-    //             width: 300,
-    //           ),
-    //         ),
-    //         Padding(
-    //           padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-    //           child: Text(
-    //             produto.name!,
-    //             style: TextStyle(
-    //               fontSize: 18,
-    //               fontWeight: FontWeight.bold,
-    //               color: Color.fromARGB(235, 16, 24, 95),
-    //             ),
-    //           ),
-    //         ),
-    //         // Row(
-    //         //   mainAxisAlignment: MainAxisAlignment.end,
-    //         //   children: [Icon(Icons.shopping_cart)],
-    //         // )
-    //       ],
-    //     ),
-    //   ),
-    // );
   }
 }
