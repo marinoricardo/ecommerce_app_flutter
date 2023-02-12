@@ -72,8 +72,9 @@ class Produtos extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color.fromRGBO(55, 55, 188, 1),
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(10)),
+                  topRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(10),
+                ),
               ),
               child: Icon(
                 Icons.add_shopping_cart_outlined,
