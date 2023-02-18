@@ -10,31 +10,31 @@ class ProdutosPage extends StatelessWidget {
   final List<Produto> produtos = [
     Produto(
       name: "Oleo",
-      price: "144",
+      price: 14,
       image: 'images/produto4.png',
       color: Colors.amber,
     ),
     Produto(
       name: "Produto 2",
-      price: "944",
+      price: 94,
       image: 'images/produto.png',
       color: Colors.red,
     ),
     Produto(
       name: "Produto 1",
-      price: "1244",
+      price: 12,
       image: 'images/produto3.png',
       color: Colors.red,
     ),
-    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
-    Produto(name: "Produto 31", price: "1244", image: 'images/produto5.png'),
-    Produto(name: "Produto 210", price: "9244", image: 'images/produto6.png'),
-    Produto(name: "O223leo", price: "144", image: 'images/produto1.png'),
-    Produto(name: "Produtowd 1", price: "1244", image: 'images/produto3.png'),
-    Produto(name: "Produtowf 5", price: "1204", image: 'images/produto4.png'),
-    Produto(name: "Produtfdo 5", price: "1204", image: 'images/produto4.png'),
-    Produto(name: "Produffdto 1", price: "1244", image: 'images/produto5.png'),
-    Produto(name: "Produtero 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Produto 5", price: 104, image: 'images/produto4.png'),
+    Produto(name: "Produto 31", price: 124, image: 'images/produto5.png'),
+    Produto(name: "Produto 210", price: 92, image: 'images/produto6.png'),
+    Produto(name: "O223leo", price: 144, image: 'images/produto1.png'),
+    Produto(name: "Produtowd 1", price: 44, image: 'images/produto3.png'),
+    Produto(name: "Produtowf 5", price: 14, image: 'images/produto4.png'),
+    Produto(name: "Produtfdo 5", price: 104, image: 'images/produto4.png'),
+    Produto(name: "Produffdto 1", price: 244, image: 'images/produto5.png'),
+    Produto(name: "Produtero 10", price: 244, image: 'images/produto6.png'),
   ];
   @override
   Widget build(BuildContext context) {

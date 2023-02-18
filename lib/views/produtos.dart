@@ -1,7 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_print, sort_child_properties_last
-
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
+import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Produtos extends StatelessWidget {
   final Produto produto;
@@ -23,11 +23,6 @@ class Produtos extends StatelessWidget {
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),
             ),
-            // elevation: 0,
-            // shadowColor: Colors.grey.shade300,
-            // shape: RoundedRectangleBorder(
-            //   borderRadius: BorderRadius.circular(20),
-            // ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -35,24 +30,23 @@ class Produtos extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Hero(
+                      tag: produto.name!,
                       child: Image.asset(
                         produto.image!,
                       ),
-                      tag: produto.name!,
                     ),
                   ),
                   Text(
                     produto.name!,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    '${produto.price!} Meticais',
-                    style: TextStyle(
+                    '${produto.price!.toString()} Meticais',
+                    style: const TextStyle(
                       fontSize: 16,
-                      // fontWeight: FontWeight.bold,
                       color: Color.fromRGBO(55, 55, 188, 1),
                     ),
                   ),
@@ -65,18 +59,21 @@ class Produtos extends StatelessWidget {
           top: 0,
           right: 0,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Provider.of<ProdutosProvider>(context, listen: false)
+                  .addProduto(produto);
+            },
             child: Container(
               height: 40,
               width: 35,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromRGBO(55, 55, 188, 1),
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   bottomLeft: Radius.circular(10),
                 ),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.add_shopping_cart_outlined,
                 color: Colors.white,
               ),

@@ -2,6 +2,9 @@
 
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/produtos_provider.dart';
 
 class DetalhesProduto extends StatefulWidget {
   const DetalhesProduto({Key? key}) : super(key: key);
@@ -50,7 +53,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                         ),
                       ),
                       Text(
-                        '${args.price!} Meticais',
+                        '${args.price!.toString()} Meticais',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -170,14 +173,19 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                         ),
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          minimumSize:
-                              MaterialStateProperty.all(Size.fromHeight(40)),
-                          backgroundColor: MaterialStateProperty.all(
-                              Color.fromRGBO(55, 55, 188, 1)),
+                        onPressed: () {
+                          Provider.of<ProdutosProvider>(context, listen: false)
+                              .addProduto(args);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Color.fromRGBO(55, 55, 188, 1),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18),
+                          ),
                         ),
-                        icon: Icon(Icons.shopping_cart),
+                        icon: Icon(
+                          Icons.shopping_cart,
+                        ),
                         label: Text(
                           'Adicionar ao Carinho',
                           style: TextStyle(

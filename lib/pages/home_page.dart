@@ -2,9 +2,11 @@
 
 import 'package:badges/badges.dart';
 import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
-import 'package:ecommerce_app_flutter/views/carinho.dart';
+import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
+import 'package:ecommerce_app_flutter/pages/carrinho/carinho.dart';
 import 'package:ecommerce_app_flutter/views/produtos.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,22 +20,24 @@ class _HomePageState extends State<HomePage> {
   int pageSelect = 0;
 
   final List<Produto> produtos = [
-    Produto(name: "Oleo4", price: "144", image: 'images/produto1.png'),
-    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
-    Produto(name: "Produto 14", price: "1244", image: 'images/produto3.png'),
-    Produto(name: "Produto 512", price: "1204", image: 'images/produto4.png'),
-    Produto(name: "Produto 155", price: "1244", image: 'images/produto5.png'),
-    Produto(name: "Produto 1120", price: "9244", image: 'images/produto6.png'),
-    Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
-    Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
-    Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
-    Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
-    Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
-    Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
+    Produto(name: "Oleo4", price: 144, image: 'images/produto1.png'),
+    Produto(name: "Produto 2", price: 94, image: 'images/produto.png'),
+    Produto(name: "Produto 14", price: 1244, image: 'images/produto3.png'),
+    Produto(name: "Produto 512", price: 1204, image: 'images/produto4.png'),
+    Produto(name: "Produto 155", price: 1244, image: 'images/produto5.png'),
+    Produto(name: "Produto 1120", price: 9244, image: 'images/produto6.png'),
+    // Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
+    // Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
+    // Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
+    // Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
+    // Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
+    // Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
   ];
 
   @override
   Widget build(BuildContext context) {
+    late ProdutosProvider prod = context.watch<ProdutosProvider>();
+    print(prod.produtos.length);
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 223, 228, 228),
       appBar: AppBar(
@@ -90,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                 label: "Produtos"),
             BottomNavigationBarItem(
                 icon: Badge(
-                  badgeContent: Text('7'),
+                  badgeContent: Text(prod.produtos.length.toString()),
                   badgeColor: Colors.white,
                   child: Icon(
                     Icons.shopping_cart_outlined,
@@ -104,7 +108,7 @@ class _HomePageState extends State<HomePage> {
 
 class Produto {
   final String? name;
-  final String? price;
+  final double? price;
   final String? image;
   final Color? color;
 
