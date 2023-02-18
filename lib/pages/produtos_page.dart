@@ -43,8 +43,11 @@ class _ProdutosPageState extends State<ProdutosPage> {
                     )
                   : Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 10),
+                        padding: const EdgeInsets.only(
+                          left: 10,
+                          right: 10,
+                          top: 5,
+                        ),
                         child: GridView.builder(
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(

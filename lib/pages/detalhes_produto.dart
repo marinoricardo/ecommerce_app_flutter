@@ -70,7 +70,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                                 Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
-                                    'Descricao do Produto',
+                                    args.description!,
                                     style: TextStyle(
                                       height: 1.5,
                                     ),
