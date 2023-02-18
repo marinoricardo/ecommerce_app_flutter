@@ -30,8 +30,8 @@ class _ProdutosPageState extends State<ProdutosPage> {
         children: [
           Consumer<ProdutosProvider>(
             builder: ((context, value, child) {
-              print('olaa');
-              print(value.allproducts.length);
+              // print('olaa');
+              // print(value.allproducts.length);
               return value.allproducts.isEmpty
                   ? Center(
                       child: CircularProgressIndicator(),

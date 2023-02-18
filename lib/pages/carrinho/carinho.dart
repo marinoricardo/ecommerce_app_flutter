@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:ecommerce_app_flutter/pages/carrinho/components/carrinho_tile.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
@@ -15,9 +15,13 @@ class Carinho extends StatefulWidget {
 class _CarinhoState extends State<Carinho> {
   final List<String> entries = <String>['Produto 1', 'Produto 2', 'Produto 3'];
   late ProdutosProvider carinho;
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController telefoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     late ProdutosProvider prod = context.watch<ProdutosProvider>();
+    // print(prod.produtoId);
     return Column(
       children: [
         Expanded(
@@ -91,7 +95,13 @@ class _CarinhoState extends State<Carinho> {
                     // Provider.of<ProdutosProvider>(context, listen: false)
                     //     .clearProdutos();
                     bool? value = await showOrderConfirmation();
-                    print(value);
+                    // print(value);
+                    if (value == true) {
+                      Provider.of<ProdutosProvider>(context, listen: false)
+                          .storeProduct(telefoneController.text.toString(),
+                              emailController.text.toString());
+                    }
+                    // print(emailController.text.toString());
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromRGBO(55, 55, 188, 1),
@@ -100,7 +110,7 @@ class _CarinhoState extends State<Carinho> {
                     ),
                   ),
                   child: Text(
-                    'Finalizar a compra',
+                    'Finalizar a compra ',
                     style: TextStyle(
                       fontSize: 17,
                     ),
@@ -127,6 +137,7 @@ class _CarinhoState extends State<Carinho> {
               'Deseja realmente concluir o pedido? Preencha os campos abaixo.'),
           actions: [
             TextFormField(
+              controller: emailController,
               decoration: InputDecoration(
                 isDense: true,
                 prefixIcon: Icon(Icons.email),
@@ -141,6 +152,7 @@ class _CarinhoState extends State<Carinho> {
               height: 10,
             ),
             TextFormField(
+              controller: telefoneController,
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                 isDense: true,
