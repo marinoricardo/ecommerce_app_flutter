@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable, unnecessary_brace_in_string_interps, sort_child_properties_last
 
-import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../models/produto_model.dart';
 import '../provider/produtos_provider.dart';
 
 class DetalhesProduto extends StatefulWidget {
@@ -27,10 +27,10 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
             children: [
               Expanded(
                 child: Hero(
-                  child: Image.asset(
+                  child: Image.network(
                     args.image!,
                   ),
-                  tag: args.name!,
+                  tag: args.id!,
                 ),
               ),
               Expanded(

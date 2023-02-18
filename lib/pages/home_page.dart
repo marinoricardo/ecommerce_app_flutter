@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors
 
 import 'package:badges/badges.dart';
 import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
@@ -19,27 +19,11 @@ class _HomePageState extends State<HomePage> {
   PageController _pageController = PageController();
   int pageSelect = 0;
 
-  final List<Produto> produtos = [
-    Produto(name: "Oleo4", price: 144, image: 'images/produto1.png'),
-    Produto(name: "Produto 2", price: 94, image: 'images/produto.png'),
-    Produto(name: "Produto 14", price: 1244, image: 'images/produto3.png'),
-    Produto(name: "Produto 512", price: 1204, image: 'images/produto4.png'),
-    Produto(name: "Produto 155", price: 1244, image: 'images/produto5.png'),
-    Produto(name: "Produto 1120", price: 9244, image: 'images/produto6.png'),
-    // Produto(name: "Oleo", price: "144", image: 'images/produto1.png'),
-    // Produto(name: "Produto 2", price: "944", image: 'images/produto.png'),
-    // Produto(name: "Produto 1", price: "1244", image: 'images/produto3.png'),
-    // Produto(name: "Produto 5", price: "1204", image: 'images/produto4.png'),
-    // Produto(name: "Produto 1", price: "1244", image: 'images/produto5.png'),
-    // Produto(name: "Produto 10", price: "9244", image: 'images/produto6.png'),
-  ];
-
   @override
   Widget build(BuildContext context) {
     late ProdutosProvider prod = context.watch<ProdutosProvider>();
-    print(prod.produtos.length);
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 223, 228, 228),
+      backgroundColor: const Color.fromARGB(255, 223, 228, 228),
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 90,
@@ -49,33 +33,16 @@ class _HomePageState extends State<HomePage> {
           width: 400,
         ),
         backgroundColor: Color.fromRGBO(55, 55, 188, 1),
-        // backgroundColor: Color.fromARGB(235, 16, 24, 95),
-        // actions: [
-        //   IconButton(
-        //       onPressed: () {
-        //         AlertDialog(
-        //           title: Text('aaa'),
-        //         );
-        //       },
-        //       icon: Icon(
-        //         Icons.more_vert,
-        //         size: 25,
-        //       ))
-        // ],
       ),
       body: PageView(
         controller: _pageController,
-        children: [ProdutosPage(), Carinho()],
+        children: [
+          ProdutosPage(),
+          const Carinho(),
+        ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: Color.fromARGB(235, 16, 24, 95),
-      //   child: Icon(Icons.search),
-      // ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: pageSelect,
-          // fixedColor: Color.fromARGB(235, 124, 124, 124),
-          // backgroundColor: Color.fromARGB(235, 32, 49, 205),
           onTap: (int page) {
             setState(() {
               pageSelect = page;
@@ -104,13 +71,4 @@ class _HomePageState extends State<HomePage> {
           ]),
     );
   }
-}
-
-class Produto {
-  final String? name;
-  final double? price;
-  final String? image;
-  final Color? color;
-
-  Produto({required this.name, this.price, this.image, this.color});
 }

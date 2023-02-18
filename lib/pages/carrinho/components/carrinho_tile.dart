@@ -1,5 +1,6 @@
-import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
+
+import '../../../models/produto_model.dart';
 
 class CarrinhoTile extends StatelessWidget {
   final Produto produto;
@@ -21,7 +22,7 @@ class CarrinhoTile extends StatelessWidget {
         ),
         subtitle: Text('${produto.price.toString()} Meticais'),
         // trailing: Text('120 Mts'),
-        leading: Image.asset(
+        leading: Image.network(
           produto.image!,
           height: 60,
           width: 60,

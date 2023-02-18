@@ -1,7 +1,8 @@
-import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../models/produto_model.dart';
 
 class Produtos extends StatelessWidget {
   final Produto produto;
@@ -30,8 +31,8 @@ class Produtos extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Hero(
-                      tag: produto.name!,
-                      child: Image.asset(
+                      tag: produto.id!,
+                      child: Image.network(
                         produto.image!,
                       ),
                     ),

@@ -3,9 +3,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-import '../pages/home_page.dart';
+import '../models/produto_model.dart';
+import 'package:http/http.dart' as http;
 
 class ProdutosProvider extends ChangeNotifier {
+  final List<Produto> allproducts = [];
   final List<Produto> _produtos = [];
 
   UnmodifiableListView<Produto> get produtos => UnmodifiableListView(_produtos);
@@ -16,7 +18,8 @@ class ProdutosProvider extends ChangeNotifier {
   }
 
   void clearProdutos() {
-    // _produtos.clear();
+    // print(jsonEncode(_produtos));
+    _produtos.clear();
     notifyListeners();
   }
 
@@ -28,5 +31,28 @@ class ProdutosProvider extends ChangeNotifier {
     }
 
     return total;
+  }
+
+  Future<bool> getAllProducts() async {
+    var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/products');
+
+    var response = await http.get(url);
+    allproducts.clear();
+    if (response.statusCode == 200) {
+      var dados = jsonDecode(response.body);
+      var dadosAux = dados['data'] as List;
+      // print('dadps');
+      // print(dados);
+
+      for (var item in dadosAux) {
+        var product = Produto.fromJson(item);
+        allproducts.add(product);
+      }
+      notifyListeners();
+      return true;
+    } else {
+      notifyListeners();
+      throw Exception('Failed to load album');
+    }
   }
 }

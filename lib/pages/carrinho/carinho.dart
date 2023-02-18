@@ -87,9 +87,11 @@ class _CarinhoState extends State<Carinho> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Provider.of<ProdutosProvider>(context, listen: false)
-                        .clearProdutos();
+                  onPressed: () async {
+                    // Provider.of<ProdutosProvider>(context, listen: false)
+                    //     .clearProdutos();
+                    bool? value = await showOrderConfirmation();
+                    print(value);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromRGBO(55, 55, 188, 1),
@@ -109,6 +111,70 @@ class _CarinhoState extends State<Carinho> {
           ),
         )
       ],
+    );
+  }
+
+  Future<bool?> showOrderConfirmation() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          title: Text('Finalize o seu Pedido'),
+          content: Text(
+              'Deseja realmente concluir o pedido? Preencha os campos abaixo.'),
+          actions: [
+            TextFormField(
+              decoration: InputDecoration(
+                isDense: true,
+                prefixIcon: Icon(Icons.email),
+                label: Text('E-mail'),
+                hintText: 'Digite o seu e-mail',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                isDense: true,
+                prefixIcon: Icon(Icons.phone),
+                label: Text('Telefone'),
+                hintText: 'Digite o seu numero',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.of(context).pop(false);
+            //   },
+            //   child: Text('Cancelar'),
+            // ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop(true);
+              },
+              child: Text('Submeter'),
+            ),
+          ],
+        );
+      },
     );
   }
 }
