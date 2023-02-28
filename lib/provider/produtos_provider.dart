@@ -61,7 +61,9 @@ class ProdutosProvider extends ChangeNotifier {
     var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/order');
     var response = await http.post(
       url,
-      headers: {'Accept': 'application/json'},
+      headers: {
+        'Accept': 'application/json',
+      },
       body: {
         'telefone': telefone,
         'email': email,
