@@ -39,6 +39,7 @@ class Produtos extends StatelessWidget {
                   ),
                   Text(
                     produto.name!,
+                    maxLines: 1,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

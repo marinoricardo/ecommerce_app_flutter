@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_final_fields
 
 import 'package:badges/badges.dart';
 import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
@@ -55,19 +55,21 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Color.fromRGBO(55, 55, 188, 1),
           items: [
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.shopping_bag_outlined,
-                ),
-                label: "Produtos"),
+              icon: Icon(
+                Icons.shopping_bag_outlined,
+              ),
+              label: "Produtos",
+            ),
             BottomNavigationBarItem(
-                icon: Badge(
-                  badgeContent: Text(prod.produtos.length.toString()),
-                  badgeColor: Colors.white,
-                  child: Icon(
-                    Icons.shopping_cart_outlined,
-                  ),
+              icon: Badge(
+                badgeContent: Text(prod.produtos.length.toString()),
+                badgeColor: Colors.white,
+                child: Icon(
+                  Icons.shopping_cart_outlined,
                 ),
-                label: "Carinho"),
+              ),
+              label: "Carinho",
+            ),
           ]),
     );
   }
