@@ -35,7 +35,7 @@ class ProdutosProvider extends ChangeNotifier {
   }
 
   Future<bool> getAllProducts() async {
-    var url = Uri.parse('http://192.168.0.102:8000/api/products');
+    var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/products');
 
     var response = await http.get(url);
     allproducts.clear();
@@ -58,7 +58,7 @@ class ProdutosProvider extends ChangeNotifier {
   }
 
   Future<bool> storeProduct(String telefone, String email) async {
-    var url = Uri.parse('http://192.168.0.102:8000/api/products');
+    var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/order');
     var response = await http.post(
       url,
       headers: {

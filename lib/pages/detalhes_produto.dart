@@ -45,7 +45,6 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
