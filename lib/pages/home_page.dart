@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields
 
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:ecommerce_app_flutter/pages/carrinho/carinho.dart';
@@ -61,9 +61,12 @@ class _HomePageState extends State<HomePage> {
               label: "Produtos",
             ),
             BottomNavigationBarItem(
-              icon: Badge(
+              icon: badges.Badge(
                 badgeContent: Text(prod.produtos.length.toString()),
-                badgeColor: Colors.white,
+                badgeStyle: badges.BadgeStyle(
+                  badgeColor: Colors.white,
+                ),
+                // badgeColor: Colors.white,
                 child: Icon(
                   Icons.shopping_cart_outlined,
                 ),

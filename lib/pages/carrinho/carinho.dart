@@ -35,7 +35,8 @@ class _CarinhoState extends State<Carinho> {
                         children: const [
                           Icon(
                             Icons.shopping_cart,
-                            size: 50,
+                            size: 70,
+                            color: Color.fromRGBO(55, 55, 188, 1),
                           ),
                           SizedBox(
                             height: 10,
@@ -44,6 +45,7 @@ class _CarinhoState extends State<Carinho> {
                             'O carrinho está vazio',
                             style: TextStyle(
                               fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
