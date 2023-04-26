@@ -34,7 +34,10 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
+                padding: EdgeInsets.symmetric(
+                  vertical: 30,
+                  horizontal: 20,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
@@ -46,20 +49,24 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                   children: [
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Column(
                         children: [
-                          Text(
-                            args.name!,
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
+                          Center(
+                            child: Text(
+                              args.name!,
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
+                          ),
+                          SizedBox(
+                            height: 30,
                           ),
                           Text(
                             '${args.price!.toString()} Meticais',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -206,6 +213,13 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                           ),
                         ]),
                       ],
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.add_shopping_cart,
+                      ),
+                      label: Text('Adicionar ao Carinho'),
                     ),
                   ],
                 ),
