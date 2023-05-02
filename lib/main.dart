@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Ecommerce',
         theme: ThemeData(
-            primarySwatch: Colors.blue,
-            backgroundColor: Color.fromARGB(235, 16, 24, 95)),
-        initialRoute: '/splash',
+          primarySwatch: Colors.blue,
+          backgroundColor: Color.fromARGB(235, 16, 24, 95),
+        ),
+        initialRoute: '/home',
         routes: {
           '/splash': ((context) => const SplashPage()),
           '/home': ((context) => const HomePage()),
