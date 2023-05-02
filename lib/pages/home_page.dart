@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           ProdutosPage(),
           const Carinho(),
-          const PerfilPage(),
+          PerfilPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

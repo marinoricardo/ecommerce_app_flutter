@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 
 class PerfilPage extends StatelessWidget {
-  const PerfilPage({super.key});
+  PerfilPage({super.key});
+
+  // List definicoes = [(Icons.settings, "Definicoes"), (Icons.settings, "Definicoes")];
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,8 @@ class PerfilPage extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    width: 120,
-                    height: 120,
+                    width: 130,
+                    height: 130,
                     child: CircleAvatar(
                       backgroundColor: Colors.grey,
                     ),
@@ -39,26 +41,42 @@ class PerfilPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Expanded(
-              child: ListView.separated(
-                itemBuilder: (context, index) {
-                  return const ListTile(
-                    leading: Icon(
-                      Icons.shop,
-                    ),
-                    title: Text('Minhas Encomendas'),
-                    trailing: Icon(Icons.arrow_forward),
-                  );
-                },
-                itemCount: 2,
-                separatorBuilder: (context, index) => Divider(
-                  thickness: 1,
-                ),
-              ),
+            ProfileMenu(
+              titulo: 'Minhas Encomendas',
+              icon: Icons.shop,
             ),
+            ProfileMenu(
+              titulo: 'Definições',
+              icon: Icons.settings,
+            ),
+            ProfileMenu(
+              titulo: 'Sair',
+              icon: Icons.logout,
+            )
           ],
         ),
       ),
+    );
+  }
+}
+
+class ProfileMenu extends StatelessWidget {
+  final String titulo;
+  final IconData icon;
+  const ProfileMenu({
+    super.key,
+    required this.titulo,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(
+        icon,
+      ),
+      title: Text(titulo),
+      trailing: Icon(Icons.arrow_forward),
     );
   }
 }
