@@ -21,8 +21,8 @@ O aplicativo possui as seguintes funcionalidades principais:
 # Dependências
 O aplicativo depende das seguintes bibliotecas de terceiros:
 
-# http: Para chamadas de API HTTP para obter informações sobre os produtos a partir do back-end de e-commerce.
-# provider: Para gerenciamento de estado do aplicativo, permitindo que os widgets acessem informações compartilhadas, como o carrinho de compras.
+• http: Para chamadas de API HTTP para obter informações sobre os produtos a partir do back-end de e-commerce.
+• provider: Para gerenciamento de estado do aplicativo, permitindo que os widgets acessem informações compartilhadas, como o carrinho de compras.
 Configuração
 Antes de executar o aplicativo, é necessário configurar o back-end de e-commerce e definir as informações de configuração no arquivo lib/config.dart. Além disso, é necessário executar o comando flutter pub get para instalar as dependências necessárias.
 
