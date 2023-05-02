@@ -2,11 +2,11 @@
 
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
-import 'package:ecommerce_app_flutter/views/produtos.dart';
+import 'package:ecommerce_app_flutter/pages/produtos/components/produtos.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/produto_model.dart';
+import '../../models/produto_model.dart';
 
 class ProdutosPage extends StatefulWidget {
   @override

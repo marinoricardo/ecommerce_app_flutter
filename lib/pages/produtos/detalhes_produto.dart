@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/produto_model.dart';
-import '../provider/produtos_provider.dart';
+import '../../models/produto_model.dart';
+import '../../provider/produtos_provider.dart';
 
 class DetalhesProduto extends StatefulWidget {
   const DetalhesProduto({Key? key}) : super(key: key);

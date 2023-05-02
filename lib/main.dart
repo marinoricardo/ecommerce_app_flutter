@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ecommerce_app_flutter/pages/detalhes_produto.dart';
+import 'package:ecommerce_app_flutter/pages/produtos/detalhes_produto.dart';
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:ecommerce_app_flutter/pages/splash_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';

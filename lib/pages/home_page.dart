@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields
 
 import 'package:badges/badges.dart' as badges;
-import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
+import 'package:ecommerce_app_flutter/pages/perfil/perfil_page.dart';
+import 'package:ecommerce_app_flutter/pages/produtos/produtos_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:ecommerce_app_flutter/pages/carrinho/carinho.dart';
-import 'package:ecommerce_app_flutter/views/produtos.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -35,10 +35,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color.fromRGBO(55, 55, 188, 1),
       ),
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         children: [
           ProdutosPage(),
           const Carinho(),
+          const PerfilPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -72,6 +74,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               label: "Carinho",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Perfil",
             ),
           ]),
     );
