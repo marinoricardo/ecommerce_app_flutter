@@ -47,179 +47,48 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Column(
-                        children: [
-                          Center(
-                            child: Text(
-                              args.name!,
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            '${args.price!.toString()} Meticais',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                    Text(
+                      args.name!,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Table(
-                      border: TableBorder.all(color: Colors.black, width: 1.5),
-                      children: const [
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Nome produto",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Marca",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Serve para os seguintes veiculos",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Fabricante",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Ano de Fabrico",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Numero do Modelo",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Dimensoes",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Center(
-                            child: Text(
-                              "Peso",
-                              style: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Text(
-                              "Mohit",
-                              style: TextStyle(fontSize: 15.0),
-                            ),
-                          ),
-                        ]),
-                      ],
+                    SizedBox(
+                      height: 10,
                     ),
+                    Text(
+                      '${args.price!.toString()} Meticais',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    // Text(args.description!),
+                    Text(
+                      'Descrição' * 30,
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+
                     ElevatedButton.icon(
                       onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(55, 55, 188, 1),
+                      ),
                       icon: const Icon(
                         Icons.add_shopping_cart,
                       ),
-                      label: Text('Adicionar ao Carinho'),
+                      label: Text(
+                        'Adicionar ao Carinho'.toUpperCase(),
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ],
                 ),

@@ -52,7 +52,8 @@ class PerfilPage extends StatelessWidget {
             ProfileMenu(
               titulo: 'Sair',
               icon: Icons.logout,
-            )
+              endIcon: false,
+            ),
           ],
         ),
       ),
@@ -63,10 +64,12 @@ class PerfilPage extends StatelessWidget {
 class ProfileMenu extends StatelessWidget {
   final String titulo;
   final IconData icon;
-  const ProfileMenu({
+  final bool endIcon;
+  ProfileMenu({
     super.key,
     required this.titulo,
     required this.icon,
+    this.endIcon = true,
   });
 
   @override
@@ -77,7 +80,7 @@ class ProfileMenu extends StatelessWidget {
         icon,
       ),
       title: Text(titulo),
-      trailing: Icon(Icons.arrow_forward),
+      trailing: endIcon ? Icon(Icons.arrow_forward) : null,
     );
   }
 }

@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
           width: 400,
         ),
         backgroundColor: Color.fromRGBO(55, 55, 188, 1),
+        actions: [],
       ),
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
