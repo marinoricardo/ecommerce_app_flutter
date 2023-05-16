@@ -46,6 +46,7 @@ class _CarinhoState extends State<Carinho> {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'Roboto',
                             ),
                           ),
                         ],
@@ -88,6 +89,7 @@ class _CarinhoState extends State<Carinho> {
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Roboto',
                 ),
               ),
               SizedBox(
@@ -106,7 +108,7 @@ class _CarinhoState extends State<Carinho> {
                     // print(emailController.text.toString());
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromRGBO(55, 55, 188, 1),
+                    backgroundColor: Color.fromRGBO(55, 55, 188, 1),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(18),
                     ),
@@ -115,6 +117,7 @@ class _CarinhoState extends State<Carinho> {
                     'Finalizar a compra ',
                     style: TextStyle(
                       fontSize: 17,
+                      fontFamily: 'Roboto',
                     ),
                   ),
                 ),

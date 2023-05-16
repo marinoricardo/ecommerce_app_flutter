@@ -52,6 +52,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto',
                       ),
                     ),
                     SizedBox(
@@ -62,6 +63,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontSize: 18,
+                        fontFamily: 'Roboto',
                       ),
                     ),
                     SizedBox(
@@ -72,6 +74,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                       'Descrição' * 30,
                       style: TextStyle(
                         fontSize: 16,
+                        fontFamily: 'Roboto',
                       ),
                     ),
 
@@ -87,6 +90,7 @@ class _DetalhesProdutoState extends State<DetalhesProduto> {
                         'Adicionar ao Carinho'.toUpperCase(),
                         style: TextStyle(
                           fontSize: 16,
+                          fontFamily: 'Roboto',
                         ),
                       ),
                     ),

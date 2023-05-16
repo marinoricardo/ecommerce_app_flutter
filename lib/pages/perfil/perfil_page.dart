@@ -32,9 +32,15 @@ class PerfilPage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
+                      fontFamily: 'Roboto',
                     ),
                   ),
-                  Text('marinoricardo@gmail.com')
+                  Text(
+                    'marinoricardo@gmail.com',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                    ),
+                  )
                 ],
               ),
             ),
@@ -79,7 +85,12 @@ class ProfileMenu extends StatelessWidget {
       leading: Icon(
         icon,
       ),
-      title: Text(titulo),
+      title: Text(
+        titulo,
+        style: TextStyle(
+          fontFamily: 'Roboto',
+        ),
+      ),
       trailing: endIcon ? Icon(Icons.arrow_forward) : null,
     );
   }

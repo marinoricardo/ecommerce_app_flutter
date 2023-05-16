@@ -47,6 +47,7 @@ class Produtos extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
                     ),
                   ),
                   Text(
@@ -54,6 +55,7 @@ class Produtos extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16,
                       color: Color.fromRGBO(55, 55, 188, 1),
+                      fontFamily: 'Roboto',
                     ),
                   ),
                 ],
