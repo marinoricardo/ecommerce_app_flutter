@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields
 
-import 'package:badges/badges.dart';
-import 'package:ecommerce_app_flutter/pages/produtos_page.dart';
+import 'package:badges/badges.dart' as badges;
+import 'package:ecommerce_app_flutter/pages/perfil/perfil_page.dart';
+import 'package:ecommerce_app_flutter/pages/produtos/produtos_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:ecommerce_app_flutter/pages/carrinho/carinho.dart';
-import 'package:ecommerce_app_flutter/views/produtos.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,12 +33,15 @@ class _HomePageState extends State<HomePage> {
           width: 400,
         ),
         backgroundColor: Color.fromRGBO(55, 55, 188, 1),
+        actions: [],
       ),
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         children: [
           ProdutosPage(),
           const Carinho(),
+          PerfilPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -61,10 +64,26 @@ class _HomePageState extends State<HomePage> {
               label: "Produtos",
             ),
             BottomNavigationBarItem(
+<<<<<<< HEAD
               icon: Icon(
                 Icons.shopping_cart_outlined,
+=======
+              icon: badges.Badge(
+                badgeContent: Text(prod.produtos.length.toString()),
+                badgeStyle: badges.BadgeStyle(
+                  badgeColor: Colors.white,
+                ),
+                // badgeColor: Colors.white,
+                child: Icon(
+                  Icons.shopping_cart_outlined,
+                ),
+>>>>>>> 973ecf765912e88fc99d9f0f91e3deccba5817be
               ),
               label: "Carinho",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: "Perfil",
             ),
           ]),
     );

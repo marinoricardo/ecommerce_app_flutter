@@ -18,9 +18,15 @@ class CarrinhoTile extends StatelessWidget {
           produto.name!,
           style: const TextStyle(
             fontWeight: FontWeight.w500,
+            fontFamily: 'Roboto',
           ),
         ),
-        subtitle: Text('${produto.price.toString()} Meticais'),
+        subtitle: Text(
+          '${produto.price.toString()} Meticais',
+          style: const TextStyle(
+            fontFamily: 'Roboto',
+          ),
+        ),
         // trailing: Text('120 Mts'),
         leading: Image.network(
           produto.image!,

@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ecommerce_app_flutter/pages/detalhes_produto.dart';
+import 'package:ecommerce_app_flutter/pages/produtos/detalhes_produto.dart';
 import 'package:ecommerce_app_flutter/pages/home_page.dart';
 import 'package:ecommerce_app_flutter/pages/splash_page.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Ecommerce',
         theme: ThemeData(
-            primarySwatch: Colors.blue,
-            backgroundColor: Color.fromARGB(235, 16, 24, 95)),
-        initialRoute: '/splash',
+          primarySwatch: Colors.blue,
+          backgroundColor: Color.fromARGB(235, 16, 24, 95),
+        ),
+        initialRoute: '/home',
         routes: {
           '/splash': ((context) => const SplashPage()),
           '/home': ((context) => const HomePage()),

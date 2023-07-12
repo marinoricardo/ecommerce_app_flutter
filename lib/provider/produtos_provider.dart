@@ -58,7 +58,11 @@ class ProdutosProvider extends ChangeNotifier {
   }
 
   Future<bool> storeProduct(String telefone, String email) async {
+<<<<<<< HEAD
     var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/order');
+=======
+    var url = Uri.parse('https://carros.dreamgate.co.mz/public/api/products');
+>>>>>>> 973ecf765912e88fc99d9f0f91e3deccba5817be
     var response = await http.post(
       url,
       headers: {

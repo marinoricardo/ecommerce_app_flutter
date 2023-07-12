@@ -1,8 +1,12 @@
+// ignore_for_file: avoid_single_cascade_in_expression_statements
+
+import 'package:another_flushbar/flushbar.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce_app_flutter/provider/produtos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../models/produto_model.dart';
+import '../../../models/produto_model.dart';
 
 class Produtos extends StatelessWidget {
   final Produto produto;
@@ -43,6 +47,7 @@ class Produtos extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'Roboto',
                     ),
                   ),
                   Text(
@@ -50,6 +55,7 @@ class Produtos extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16,
                       color: Color.fromRGBO(55, 55, 188, 1),
+                      fontFamily: 'Roboto',
                     ),
                   ),
                 ],
@@ -64,6 +70,18 @@ class Produtos extends StatelessWidget {
             onTap: () {
               Provider.of<ProdutosProvider>(context, listen: false)
                   .addProduto(produto);
+              Flushbar(
+                backgroundColor: Colors.white,
+                flushbarPosition: FlushbarPosition.TOP,
+                message: "${produto.name} adicionado ao carinho",
+                messageColor: Colors.black,
+                icon: const Icon(
+                  Icons.info_outline,
+                  size: 28.0,
+                  color: Color.fromRGBO(55, 55, 188, 1),
+                ),
+                duration: const Duration(seconds: 3),
+              ).show(context);
             },
             child: Container(
               height: 40,
