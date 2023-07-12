@@ -64,20 +64,8 @@ class _HomePageState extends State<HomePage> {
               label: "Produtos",
             ),
             BottomNavigationBarItem(
-<<<<<<< HEAD
               icon: Icon(
                 Icons.shopping_cart_outlined,
-=======
-              icon: badges.Badge(
-                badgeContent: Text(prod.produtos.length.toString()),
-                badgeStyle: badges.BadgeStyle(
-                  badgeColor: Colors.white,
-                ),
-                // badgeColor: Colors.white,
-                child: Icon(
-                  Icons.shopping_cart_outlined,
-                ),
->>>>>>> 973ecf765912e88fc99d9f0f91e3deccba5817be
               ),
               label: "Carinho",
             ),
