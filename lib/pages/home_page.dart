@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white.withAlpha(100),
           backgroundColor: Color.fromRGBO(55, 55, 188, 1),
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_bag_outlined,
@@ -61,12 +61,8 @@ class _HomePageState extends State<HomePage> {
               label: "Produtos",
             ),
             BottomNavigationBarItem(
-              icon: Badge(
-                badgeContent: Text(prod.produtos.length.toString()),
-                badgeColor: Colors.white,
-                child: Icon(
-                  Icons.shopping_cart_outlined,
-                ),
+              icon: Icon(
+                Icons.shopping_cart_outlined,
               ),
               label: "Carinho",
             ),
